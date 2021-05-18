@@ -236,6 +236,7 @@ basket = ['a', 'b', 'z', 'c', 'd', 'e', 'f', 'e']
 ## set ~~~~~~~~  unordered collection of unique objects ###
 
 my_set = {1,2,3,4,5,6,6,6,7}
+
 # print(my_set)
 # print(my_set.add(100))
 # print(my_set)
@@ -249,8 +250,19 @@ my_set = {1,2,3,4,5,6,6,6,7}
 # my_list6 = list(my_set5)
 # print(my_list6)
 
-my_set1 = {1,2,3,4,5,6,6,6,7}
+my_set1 = {1,2,3,6,6,6,7}
 my_set2 = {1,2,9,4,5,6,88,6,7}
+my_set3 = {11,12,13}
+print(my_set1.difference(my_set2)) 
+
+print(my_set1 | my_set2)  #join
+print(my_set1.union(my_set2))  #join
+print(my_set1 & my_set2)  #intersection
+print(my_set1.intersection())
+print(my_set1.isdisjoint(my_set2))
+print(my_set1.isdisjoint(my_set3))
+print(my_set1.issubset(my_set2))
+print(my_set1.issuperset(my_set2))
 
 
 ## dict
