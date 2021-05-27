@@ -250,24 +250,32 @@ my_set = {1,2,3,4,5,6,6,6,7}
 # my_list6 = list(my_set5)
 # print(my_list6)
 
-my_set1 = {1,2,3,6,6,6,7}
-my_set2 = {1,2,9,4,5,6,88,6,7}
-my_set3 = {11,12,13}
-print(my_set1.difference(my_set2)) 
+# my_set1 = {1,2,3,6,6,6,7}
+# my_set2 = {1,2,9,4,5,6,88,6,7}
+# my_set3 = {11,12,13}
 
-print(my_set1 | my_set2)  #join
-print(my_set1.union(my_set2))  #join
-print(my_set1 & my_set2)  #intersection
-print(my_set1.intersection())
-print(my_set1.isdisjoint(my_set2))
-print(my_set1.isdisjoint(my_set3))
-print(my_set1.issubset(my_set2))
-print(my_set1.issuperset(my_set2))
+# print(my_set1.difference(my_set2)) 
+# print(my_set1.discard(6)) 
+# print(my_set1)
+
+# print(my_set1.difference_update(my_set2)) 
+# print(my_set1)
+
+# print(my_set2.difference_update(my_set1)) 
+# print(my_set2)
+
+# print(my_set1 | my_set2)  #join
+# print(my_set1.union(my_set2))  #join
+# print(my_set1 & my_set2)  #intersection
+# print(my_set1.intersection(my_set3))
+# print(my_set1.isdisjoint(my_set2))
+# print(my_set1.isdisjoint(my_set3))
+# print(my_set1.issubset(my_set2))
+# print(my_set1.issuperset(my_set3))
 
 
-## dict
-# print(type(a/b))
-# print(a/b)
+# dict
+
 
 ## +++ Classes (customised data Types)
 
@@ -396,6 +404,156 @@ my_list1 = [
 
 # my_list4.update({'Religion':'Sanatan'})
 # print(my_list4)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+## 26 MAy 2021
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Python Basics 2
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+##~~Conditional Logics ~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+# is_prem = True
+# is_not_moh  = True
+
+# if is_prem and is_not_moh:
+#   print('Krishna and Radha Love, and not moh. ')
+#   print('Radhe Radhe')
+# elif is_not_moh:
+#   print('Krishna and Radha moh, and not love. ')
+#   print('Radhe Radhe')
+# else:
+#   print('Radhe Radhe Radhe')
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Truthy and Falsy
+
+# print(bool('')) #false
+# print(bool('hello')) #true
+# print(bool(0)) #false
+# print(bool(123)) #true
+
+# is_prem = 'YesYes Krishna ji loves radha'
+# is_not_moh  = 'No No'
+
+# if is_prem and is_not_moh:
+#   print('Krishna and Radha Love, and not moh. ')
+#   print('Radhe Radhe')
+# elif is_not_moh:
+#   print('Krishna and Radha moh, and not love. ')
+#   print('Radhe Radhe')
+# else:
+#   print('Radhe Radhe Radhe')
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Ternary Operator
+## action_if_true if condition else action_if_false
+
+# is_prem = 'YesYes Krishna ji loves radha'
+# is_not_moh  = ''
+
+# naam_bolo = 'Radhe Radhe' if (is_prem and is_not_moh) else 'Radhe Krishna'
+# print(naam_bolo)
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Short Circuiting - AND and OR operator - both terminates as soon as it satifies some condition for whole
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Logical Operator - <,>, ==, >=, <=, !=, and, or, not
+
+# is_magician = True
+# is_expert = True
+
+# out_msg = 'Expert Magician' if (is_magician and is_expert) else ('You are Getting There' if (is_magician) else 'You Need Magic Powers') 
+
+# print(out_msg)
+
+# if is_magician and is_expert:
+#   print('Expert MAgician')
+# elif is_magician and not is_expert:
+#   print('Getting There')
+# else:
+#   print('Need MAgical Powers')
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## == compares values
+## is compares memory location
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Loops
+
+# for num in {1,2,3,4,5,6,7,8,9}:
+#   print(f'Table for {num} is ::')
+#   for num2 in {1,2,3,4,5,6,7,8,9,10}:
+#     print(f' {num} * {num2} = {num*num2}')
+#   print(f'End of Table for {num}.')
+#   print(f'+++++++++++++++++++++++')
+
+# for alpha in 'JAi Shri Radhe Krishna':
+#   print(alpha)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## iteratives in a Dictionary
+
+# user = {
+#   'Forename': 'Ritesh',
+#   'Surname': 'Kumar',
+#   'Age': 33,
+#   'Sex': 'Male'
+
+# }
+# print('for items in user')
+# for items in user:
+#   print(items)
+
+# print('for items in user.items')
+# for items in user.items():
+#   print(items)
+
+# print('for items in user.keys')
+# for items in user.keys():
+#   print(items)
+
+# print('for items in user.values')
+# for items in user.values():
+#   print(items)
+
+# print('for k, v in user')
+# for k, v in user.items():
+#   print(k, v)
+
+# my_list6 = [
+#   {
+#     'Forename': 'Ritesh',
+#     'Surname': 'Kumar',
+#     'Age': 33,
+#     'Sex': 'Male'
+#   },
+#   {
+#     'Forename': 'Jitesh',
+#     'Surname': 'Kumar',
+#     'Age': 34,
+#     'Sex': 'Male'
+#   },
+#   {
+#     'Forename': 'Titesh',
+#     'Surname': 'Cumar',
+#     'Age': 35,
+#     'Sex': 'Male'
+#   }
+# ]
+
+# for a,b in my_list6[2].items():
+#   print(a,b)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# mylist7 = [1,2,3,4,5,6,7,8,9]
+# sumx1 = 0
+# for numx1 in mylist7:
+#   sumx1 = numx1  + sumx1
+#   print(sumx1)
+# print(sumx1)
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
