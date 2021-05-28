@@ -489,7 +489,6 @@ my_list1 = [
 
 # for alpha in 'JAi Shri Radhe Krishna':
 #   print(alpha)
-
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 ## iteratives in a Dictionary
 
@@ -552,14 +551,257 @@ my_list1 = [
 #   print(sumx1)
 # print(sumx1)
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## range()
+# print(range(100))
+
+# for num in range(100):
+#   print(f'Table for {num} is ::')
+#   for num2 in {1,2,3,4,5,6,7,8,9,10}:
+#     print(f' {num} * {num2} = {num*num2}')
+#   print(f'End of Table for {num}.')
+#   print(f'+++++++++++++++++++++++')
+
+# for _ in range(0,10,3):
+#   print('Ritesh')
+
+# for nunu in range(10,0,-2):
+#   print(nunu)  
+
+# for _ in range(2):
+#   print(list(range(10)))
+
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+##enamurate - gives the IndexError
+# for index,number in enumerate(list(range(1,100))):
+#   if number == 50:
+#     print(f'Index for {number} is {index}.')
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## While
+
+# item2 = 4
+# while item2 < 50:
+#   print(item2)
+#   item2 += 1
+# else:
+#   print('done with else!!')
+
+# item2 = 4
+# while item2 < 50:
+#   print(item2)
+#   item2 += 1
+#   break
+# else:
+#   print('done with else!!')
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+# while True:
+#   comment = input('Password of at leats 10 letter : ')
+#   if (len(comment) < 11):
+#     print('Password is less than 10 letters!! Try Again')
+#   else:
+#     print('PAssword Accepted!! ')
+#     break
+
+# while True:
+#   comment = input('Password of at leats 10 letter : ')
+#   if (len(comment) < 11):
+#     print('Password is less than 10 letters!! Try Again')
+#     continue
+#   else:
+#     break
+  
+#Exercise!
+#Display the image below to the right hand side where the 0 is going to be ' ', and the 1 is going to be '*'. This will reveal an image!
+picture = [
+  [0,0,0,1,0,0,0],
+  [0,0,1,1,1,0,0],
+  [0,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0]
+]
+
+# picture2 = []    
+
+# for row in range(len(picture)):
+
+#   index = 0
+#   picture2 = [] 
+#   while index < len(picture[row]):
+#     if picture[row][index] == 0:
+#       picture2.append(' ')
+#     else:
+#       picture2.append('*')
+#     index += 1
+#   print(picture2[:])
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# fill = '*'
+# empty = ' '
+# for row in picture:
+#   for pixel in row:
+#     if pixel:
+#       print(fill, end='')
+#     else:
+#       print(empty, end='')
+#   print('')
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+##Exercise
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n', 'a']
+# dup_list = []
+# for value in some_list:
+#   if (dup_list.count(value) > 0):
+#     continue
+#   if (some_list.count(value) > 1):
+#     dup_list.append(value)
+
+# print(dup_list)    
+
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n', 'a']
+# dup_list = []
+# for value in some_list:
+#   if some_list.count(value) > 1:
+#     if value not in dup_list:
+#       dup_list.append(value)
+
+# print(dup_list)    
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Functions ~~~~~~~~~~
+# def say_hello():
+#   print('hello')
+
+# say_hello()
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+##parametres is when function is defined; Arguments are the actual values given
+
+# def love(param1, param2):  ## parametrs
+#   print(f'{param1} loves :) {param2}')
+
+# love('Radha', 'Kishan')  ## positional arguments
+# love(param2='Radha',param1='Kishan') ## keyword arguments
+
+# def love1(param1='God', param2='Human'):  ## parametrs
+#   print(f'{param1} loves :) {param2} @@@')
+
+# love1('Radha', 'Kishan')  ## positional arguments
+# love1()  ## Default parameters
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# def sum(a, b):
+#   return a + b   ## function exists with Return
+
+# print(sum(2,3))
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# age = input("What is your age?: ")
+
+# if int(age) < 18:
+# 	print("Sorry, you are too young to drive this car. Powering off")
+# elif int(age) > 18:
+# 	print("Powering On. Enjoy the ride!");
+# elif int(age) == 18:
+# 	print("Congratulations on your first year of driving. Enjoy the ride!")
+
+#1. Wrap the above code in a function called checkDriverAge(). Whenever you call this function, you will get prompted for age. 
+# Notice the benefit in having checkDriverAge() instead of copying and pasting the function everytime?
+
+#2 Instead of using the input(). Now, make the checkDriverAge() function accept an argument of age, so that if you enter:
+#checkDriverAge(92);
+#it returns "Powering On. Enjoy the ride!"
+#also make it so that the default age is set to 0 if no argument is given.
+
+# def checkDriverAge(age=0):
+#   if int(age) < 18:
+# 	  print("Sorry, you are too young to drive this car. Powering off")
+#   elif int(age) > 18:
+# 	  print("Powering On. Enjoy the ride!");
+#   elif int(age) == 18:
+# 	  print("Congratulations on your first year of driving. Enjoy the ride!")  
+
+# checkDriverAge()
+# checkDriverAge(92)
+# ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+## Methods are always owned by something before dot(.)
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+##docstrings
+
+# def test1(a):
+#   '''
+#   This is a sample function that tells the importance of docstring
+#   which will be visible after hovering over the function. Try it.:)
+#   starting comment with 3 marks and end ing with 3 marks.
+#   '''
+#   print('££££££')
+
+# test1(1)
+
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+##    *args and **kwargs
+
+# def test2(*args):
+#   print(*args)
+#   print(args)
+#   return sum(args)
+
+# print(test2(1,2,3,4,5,6,7,7))
+
+# def test3(*args, **kwargs):
+#   print(*args)    ## returns individual args
+#   print(args)     ## returns tuples as values
+#   print(*kwargs)  ## gives key values 
+#   print(kwargs)   ##give dictionary
+#   return sum(args)
+
+# print(test3(1,2,3,4,5,6,7,7, n1=88, n2=99))
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## Rule of params: params, *args, default params, **kwargs 
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+# def highest_num(li):
+#   '''
+#   To print the highest number in a list
+#   '''
+#   print(li)
+#   val = 0
+#   for item in li:
+#     if (item > val):
+#       val = item
+#   print(f'Highest Number is {li} is : {val}.')
+
+# # highest_num([10,1,-22,3,4,5,11])
+# ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# def highest_even(li):
+#   '''
+#   To print the highest even number in a list
+#   '''
+#   val = 0
+#   li_even = []
+#   for item in li:
+#     if (item % 2) == 0:
+#       li_even.append(item)
+  ##return max(li_even)    
+  # if  len(li_even):
+  #   highest_num(li_even)    
+  # else:
+  #   print('No even number is list')    
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#  
+
+# highest_num([10,1,-22,3,4,5,11])
+# print(highest_even([10,1,-22,3,4,5,11]))
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+## End for 27 May 2021
+
+
+## Walrus Function
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
